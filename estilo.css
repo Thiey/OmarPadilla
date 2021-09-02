@@ -1,27 +1,110 @@
-
-.contenedor{
-    margin: auto;
-    display: table;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
 }
-.texto{
-    float: left;
-    color: black;
+
+  /*fondo*/
+.fondo{
     position: relative;
-}
-.prueba{
-    position: absolute;
-    right: 0;
-    width: 0;
-    background: white;
-    border-left: 1px solid black;
-    animation: maquina 5s infinite alternate ;
+    width: 100%;
+    height: 50vh;
+    background: radial-gradient(#333,#000);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes maquina {
-    from{
-        width: 100%;
+.fondo h2{
+    color: #fff;
+    font-size: 8em;
+    text-transform: uppercase;
+}
+.fondo .set{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.fondo .set div{
+    position: absolute;
+    display: block;
+}
+.fondo .set div:nth-child(1){
+    left : 20%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7;
+}
+.fondo .set div:nth-child(2){
+    left : 50%;
+    animation: animate 20s linear infinite;
+    animation-delay: -5;
+}
+.fondo .set div:nth-child(3){
+    left : 70%;
+    animation: animate 20s linear infinite;
+    animation-delay: 0;
+}
+.fondo .set div:nth-child(4){
+    left : 0%;
+    animation: animate 15s linear infinite;
+    animation-delay: -5;
+}
+.fondo .set div:nth-child(5){
+    left : 85%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10;
+}
+.fondo .set div:nth-child(6){
+    left : 0%;
+    animation: animate 12s linear infinite;
+}
+.fondo .set div:nth-child(7){
+    left : 15%;
+    animation: animate 14s linear infinite;
+}
+.fondo .set div:nth-child(8){
+    left : 60%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        top: -10%;
+        transform: translateY(20px) rotate(0deg);
     }
-    to{
-        width: 0;
+    10%{
+        opacity: 1;
     }
+    20%{
+        transform: translateY(-20px) rotate(45deg);
+    }
+    40%{
+        transform: translateY(-20px) rotate(90deg);
+    }
+    60%{
+        transform: translateY(20px) rotate(180deg);
+    }
+    80%{
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100%{
+        transform: translateY(-20px) rotate(225deg);
+
+    }
+
+}
+.set2{
+    transform: scale(2) rotateY(180deg);
+    filter:blur(2px);
+}
+.set3{
+    transform: scale(0.8) rotateY(180deg);
+    filter:blur(2px);
 }

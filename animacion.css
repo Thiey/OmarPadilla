@@ -1,0 +1,64 @@
+/*Animacion de letras*/
+.contenedor{
+    margin: auto;
+    display: table;
+}
+.texto{
+    float: left;
+    color: black;
+    position: relative;
+}
+.prueba{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: white;
+    border-left: 1px solid black;
+    animation: letras 5s infinite alternate ;
+}
+@keyframes letras {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+/* Termina Animacion de letras Maquina de escribir*/
+
+.item1 { 
+    grid-area: header ; 
+    height: 300px;
+}
+
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header'
+      'menu main main main right'
+      'menu footer footer footer footer';
+    grid-gap: 5px;
+    background-color: #2196F3;
+    padding: 10px;
+    height: 100%;
+    margin-top:0px;
+  }
+
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }  
+
+
+
+
+
+
+
