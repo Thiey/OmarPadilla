@@ -1,0 +1,27 @@
+
+.contenedor{
+    margin: auto;
+    display: table;
+}
+.texto{
+    float: left;
+    color: black;
+    position: relative;
+}
+.prueba{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: white;
+    border-left: 1px solid black;
+    animation: maquina 5s infinite alternate ;
+}
+
+@keyframes maquina {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
