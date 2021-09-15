@@ -56,7 +56,67 @@
     font-size: 30px;
   }  
 
+  .center {
 
+    margin: 0 auto;
+   
+    }
+   
+   .awesome {
+   
+     font-family: futura;
+     font-style: italic;
+   
+     width:100%;
+   
+     margin: 0 auto;
+     text-align: center;
+   
+     color:#313131;
+     font-size:45px;
+     font-weight: bold;
+     position: absolute;
+     -webkit-animation:colorchange 10s infinite;
+   
+   
+   }
+   
+   @-webkit-keyframes colorchange {
+     0% {
+   
+       color: rgba(214, 191, 89, 0.986);
+     }
+   
+     10% {
+   
+       color: #8e44ad;
+     }
+   
+     20% {
+   
+       color: #838bff;
+     }
+   
+     30% {
+   
+       color: #f80101;
+     }
+   
+     40% {
+   
+       color: rgba(255, 255, 255, 0.986);
+     }
+   
+     50% {
+   
+       color: #11ee6d;
+     }
+   
+     60% {
+   
+       color: rgba(255, 255, 255, 0.986);
+   }
+   }
 
 
 
